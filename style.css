@@ -283,3 +283,59 @@ nav.scrolled {
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
+
+.simplify-text {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;      
+  user-select: none;    
+  z-index: 101; 
+}
+
+.simplify-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.simplify-text {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.caret {
+    margin-left: 5px;
+    font-size: 0.6em;
+}
+
+.simplify-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #141414;
+    border: 1px solid #333;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    z-index: 100;
+    border-radius: 4px;
+}
+
+.simplify-menu li {
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.simplify-menu li:hover {
+    background-color: #333;
+}
+
+.simplify-wrapper:hover .simplify-menu {
+    display: block;
+}

@@ -1,283 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav id="nav">
-        <div class="nav-left">
-            <div class="logo">NETFLIX</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shows</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">New & Popular</a></li>
-                <li><a href="#">My List</a></li>
-                <li><a href="#">Browse by Languages</a></li>
-            </ul>
+      <div class="nav-left">
+        <div class="logo">NETFLIX</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shows</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#">New & Popular</a></li>
+          <li><a href="#">My List</a></li>
+          <li><a href="#">Browse by Languages</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="simplify-wrapper">
+          <div class="simplify-text">
+            Simplify
+            <span class="caret">&#9662;</span>
+            <!-- small downward triangle -->
+          </div>
+          <ul class="simplify-menu">
+            <li data-filter="recently-watched">Recently Watched</li>
+            <li data-filter="continue-watching">Continue Watching</li>
+            <li data-filter="top-tv-shows">Top TV Shows</li>
+            <li data-filter="my-list">My List</li>
+            <li data-filter="banner">Banner</li>
+          </ul>
         </div>
-        <div class="nav-right">
-            <svg class="icon" viewBox="0 0 24 24" fill="white">
-                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-            </svg>
-            <div class="notification">
-                <svg class="icon" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
-                </svg>
-                <div class="badge">13</div>
-            </div>
-            <div class="profile"></div>
+
+        <svg class="icon" viewBox="0 0 24 24" fill="white">
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+        <div class="notification">
+          <svg class="icon" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+            />
+          </svg>
+          <div class="badge">13</div>
         </div>
+        <div class="profile"></div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-content">
-            <div class="netflix-logo-hero">NETFLIX</div>
-            <h1 class="hero-title">THE MONSTER<br>OF FLORENCE</h1>
-            <h2 class="hero-subtitle">Watch the Limited Series Now</h2>
-            <p class="hero-description">
-                For years, Italy's most notorious serial killer terrorized the nation's couples. This chilling drama series goes back to 1968 — where it all began.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-play">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    Play
-                </button>
-                <button class="btn btn-info">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-                    </svg>
-                    More Info
-                </button>
-            </div>
+      <div class="hero-content">
+        <div class="netflix-logo-hero">NETFLIX</div>
+        <h1 class="hero-title">THE MONSTER<br />OF FLORENCE</h1>
+        <h2 class="hero-subtitle">Watch the Limited Series Now</h2>
+        <p class="hero-description">
+          For years, Italy's most notorious serial killer terrorized the
+          nation's couples. This chilling drama series goes back to 1968 — where
+          it all began.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Play
+          </button>
+          <button class="btn btn-info">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+            More Info
+          </button>
         </div>
-        <div class="rating">TV-MA</div>
+      </div>
+      <div class="rating">TV-MA</div>
     </div>
 
     <!-- Content Sections -->
     <div class="content-section">
-        <h2 class="section-title">My List</h2>
-        <div class="content-row">
-            <div class="content-card">
-                <!-- <div class="card-badge">Recently Added</div> -->
-                <!-- <div class="card-title">MONSTER<br>The Ed Gein Story</div> -->
-                <img src="Images/Monster.png" alt="Thumbnail of Monsters of the Open Sea tv show">
-            </div>
-            <div class="content-card">
-                <!-- <div class="card-badge">10</div> -->
-                <img src="Images/Billionairs club.png" alt="Thumbnail of Billionaire's Bunker tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Delicious Dungeon.png" alt="Thumbnail of Delicious Dungeon Anime tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Weak Hero .png" alt="Thumbnail of Weak Hero tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Alice in Wonderland.png" alt="Thumbnail of Alice in Wonder Land tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Karate Kid Legends.png" alt="Thumbnail of Karate Kid 2025 movie">
-            </div>
+      <h2 class="section-title">My List</h2>
+      <div class="content-row">
+        <div class="content-card">
+          <!-- <div class="card-badge">Recently Added</div> -->
+          <!-- <div class="card-title">MONSTER<br>The Ed Gein Story</div> -->
+          <img
+            src="Images/Monster.png"
+            alt="Thumbnail of Monsters of the Open Sea tv show"
+          />
         </div>
+        <div class="content-card">
+          <!-- <div class="card-badge">10</div> -->
+          <img
+            src="Images/Billionairs club.png"
+            alt="Thumbnail of Billionaire's Bunker tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Delicious Dungeon.png"
+            alt="Thumbnail of Delicious Dungeon Anime tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Weak Hero .png"
+            alt="Thumbnail of Weak Hero tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Alice in Wonderland.png"
+            alt="Thumbnail of Alice in Wonder Land tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Karate Kid Legends.png"
+            alt="Thumbnail of Karate Kid 2025 movie"
+          />
+        </div>
+      </div>
     </div>
 
     <div class="content-section">
-        <h2 class="section-title">Continue Watching for William</h2>
-        <div class="content-row">
-            <div class="content-card">
-                <img src="Images/Billionairs club.png" alt="Thumbnail of Monsters of the Open Sea tv show">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 45%"></div>
-                </div>
-            </div>
-            <div class="content-card">
-                <img src="Images/Delicious Dungeon.png" alt="Thumbnail of Delicious Dungeon Anime tv show">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 65%"></div>
-                </div>
-            </div>
-            <div class="content-card">
-                <img src="Images/Karate Kid Legends.png" alt="Thumbnail of Karate Kid 2025 movie">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 30%"></div>
-                </div>
-            </div>
-            <div class="content-card">
-                <div class="card-badge">Recently Added</div>
-                <img src="Images/Monster.png" alt="Thumbnail of Monsters of the Open Sea tv show">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 15%"></div>
-                </div>
-            </div>
-            <div class="content-card">
-                <img src="Images/Sneaky Pete.png" alt="Thumbnail of Nero tv show">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="content-card">
-                <img src="Images/Weak Hero .png" alt="Thumbnail of Weak Hero tv show">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 55%"></div>
-                </div>
-            </div>
+      <h2 class="section-title">Continue Watching for William</h2>
+      <div class="content-row">
+        <div class="content-card">
+          <img
+            src="Images/Billionairs club.png"
+            alt="Thumbnail of Monsters of the Open Sea tv show"
+          />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%"></div>
+          </div>
         </div>
+        <div class="content-card">
+          <img
+            src="Images/Delicious Dungeon.png"
+            alt="Thumbnail of Delicious Dungeon Anime tv show"
+          />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 65%"></div>
+          </div>
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Karate Kid Legends.png"
+            alt="Thumbnail of Karate Kid 2025 movie"
+          />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 30%"></div>
+          </div>
+        </div>
+        <div class="content-card">
+          <div class="card-badge">Recently Added</div>
+          <img
+            src="Images/Monster.png"
+            alt="Thumbnail of Monsters of the Open Sea tv show"
+          />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 15%"></div>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="Images/Sneaky Pete.png" alt="Thumbnail of Nero tv show" />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Weak Hero .png"
+            alt="Thumbnail of Weak Hero tv show"
+          />
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 55%"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="content-section">
-        <h2 class="section-title">We Think You'll Love These</h2>
-        <div class="content-row">
-            <div class="content-card">
-                <img src="Images/Physical 100 Asia.png" alt="Thumbnail of Physical 100 tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/The elixir.png" alt="Thumbnail of The Elixir tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/House of Dynamite.png" alt="Thumbnail of House of Dynamite Movie">
-            </div>
-            <div class="content-card">
-                <img src="Images/Wayward.png" alt="Thumbnail of Wayward tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Mad Unicorn.png" alt="Thumbnail of Korean Thriller tv show">
-            </div>
-            <div class="content-card">
-                <div class="card-badge">Recently Added</div>
-                <img src="Images/The BTK killer.png" alt="Thumbnail of Documentary">
-            </div>
+      <h2 class="section-title">We Think You'll Love These</h2>
+      <div class="content-row">
+        <div class="content-card">
+          <img
+            src="Images/Physical 100 Asia.png"
+            alt="Thumbnail of Physical 100 tv show"
+          />
         </div>
+        <div class="content-card">
+          <img
+            src="Images/The elixir.png"
+            alt="Thumbnail of The Elixir tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/House of Dynamite.png"
+            alt="Thumbnail of House of Dynamite Movie"
+          />
+        </div>
+        <div class="content-card">
+          <img src="Images/Wayward.png" alt="Thumbnail of Wayward tv show" />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Mad Unicorn.png"
+            alt="Thumbnail of Korean Thriller tv show"
+          />
+        </div>
+        <div class="content-card">
+          <div class="card-badge">Recently Added</div>
+          <img src="Images/The BTK killer.png" alt="Thumbnail of Documentary" />
+        </div>
+      </div>
     </div>
 
     <div class="content-section">
-        <h2 class="section-title">WWE: Live & Upcoming</h2>
-        <div class="content-row">
-            <div class="content-card">
-            <img src="Images/WWE I.png" alt="Thumbnail of WWE">
-            </div>
-            <div class="content-card">
-            <img src="Images/WWE II.png" alt="Thumbnail of WWE">
-            </div>
-            <div class="content-card">
-            <img src="Images/WWE III.png" alt="Thumbnail of WWE">
-            </div>
-            <div class="content-card">
-                <img src="Images/WWE IV.png" alt="Thumbnail of WWE">
-            </div>
+      <h2 class="section-title">WWE: Live & Upcoming</h2>
+      <div class="content-row">
+        <div class="content-card">
+          <img src="Images/WWE I.png" alt="Thumbnail of WWE" />
         </div>
+        <div class="content-card">
+          <img src="Images/WWE II.png" alt="Thumbnail of WWE" />
+        </div>
+        <div class="content-card">
+          <img src="Images/WWE III.png" alt="Thumbnail of WWE" />
+        </div>
+        <div class="content-card">
+          <img src="Images/WWE IV.png" alt="Thumbnail of WWE" />
+        </div>
+      </div>
     </div>
 
     <!-- New on Netflix -->
     <div class="content-section">
-        <h2 class="section-title">New on Netflix</h2>
-        <div class="content-row">
-            <div class="content-card">
-                <img src="Images/House of Dynamite.png" alt="Thumbnail of House of Dynamite Movie">
-            </div>
-            <div class="content-card">
-                <img src="Images/Italy Monster.png" alt="Thumbnail of Monster of Florence Documentary">
-            </div>
-            <div class="content-card">
-                <img src="Images/Physical 100 Asia.png" alt="Thumbnail of Physical 100 tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Ballad of a small player.png" alt="Thumbnail of Ballad of a small player movie">
-            </div>
-            <div class="content-card">
-                <img src="Images/The elixir.png" alt="Thumbnail of The Elixir tv show">
-            </div>
-            <div class="content-card">
-                <img src="Images/Ruler of Fortune.png" alt="Thumbnail of The Elixir tv show">
-            </div>
+      <h2 class="section-title">New on Netflix</h2>
+      <div class="content-row">
+        <div class="content-card">
+          <img
+            src="Images/House of Dynamite.png"
+            alt="Thumbnail of House of Dynamite Movie"
+          />
         </div>
+        <div class="content-card">
+          <img
+            src="Images/Italy Monster.png"
+            alt="Thumbnail of Monster of Florence Documentary"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Physical 100 Asia.png"
+            alt="Thumbnail of Physical 100 tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Ballad of a small player.png"
+            alt="Thumbnail of Ballad of a small player movie"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/The elixir.png"
+            alt="Thumbnail of The Elixir tv show"
+          />
+        </div>
+        <div class="content-card">
+          <img
+            src="Images/Ruler of Fortune.png"
+            alt="Thumbnail of The Elixir tv show"
+          />
+        </div>
+      </div>
     </div>
-<!-- Top Searches -->
-<div class="content-section">
-    <h2 class="section-title">Top Searches</h2>
-    <div class="content-row">
+    <!-- Top Searches -->
+    <div class="content-section">
+      <h2 class="section-title">Top Searches</h2>
+      <div class="content-row">
         <div class="content-card">
-        <div class="card-badge">Recently Added</div>
-        <img src="Images/Hacksaw Ridge.png" alt="Thumbnail of Hacksaw Ridge Movie">
+          <div class="card-badge">Recently Added</div>
+          <img
+            src="Images/Hacksaw Ridge.png"
+            alt="Thumbnail of Hacksaw Ridge Movie"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/boots.png" alt="Thumbnail of Boots tv show">
+          <img src="Images/boots.png" alt="Thumbnail of Boots tv show" />
         </div>
         <div class="content-card">
-        <img src="Images/Animal Kingdom.png" alt="Thumbnail of Animal Kingdom tv show">
+          <img
+            src="Images/Animal Kingdom.png"
+            alt="Thumbnail of Animal Kingdom tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/NOSA2.png" alt="Thumbnail of NOSA2 tv show">
+          <img src="Images/NOSA2.png" alt="Thumbnail of NOSA2 tv show" />
         </div>
         <div class="content-card">
-        <img src="Images/The Forgiven.png" alt="Thumbnail of The Forgiven movie">
+          <img
+            src="Images/The Forgiven.png"
+            alt="Thumbnail of The Forgiven movie"
+          />
         </div>
         <div class="content-card">
-            <img src="Images/Mask.png" alt="Thumbnail of The Mask movie">
+          <img src="Images/Mask.png" alt="Thumbnail of The Mask movie" />
         </div>
+      </div>
     </div>
-</div>
 
-<!-- Because you added -->
-<div class="content-section">
-    <h2 class="section-title">Because you added It's Okay to Not Be Okay to your list</h2>
-    <div class="content-row">
+    <!-- Because you added -->
+    <div class="content-section">
+      <h2 class="section-title">
+        Because you added It's Okay to Not Be Okay to your list
+      </h2>
+      <div class="content-row">
         <div class="content-card">
-        <img src="Images/Beyond the Bar.png" alt="Thumbnail of Beyond the Bar tv show">
+          <img
+            src="Images/Beyond the Bar.png"
+            alt="Thumbnail of Beyond the Bar tv show"
+          />
         </div>
         <div class="content-card">
-        <div class="card-badge">New Episode</div>
-        <img src="Images/Ray of Sunshine.png" alt="Thumbnail of Ray of Sunshine tv show">
+          <div class="card-badge">New Episode</div>
+          <img
+            src="Images/Ray of Sunshine.png"
+            alt="Thumbnail of Ray of Sunshine tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/Bon Apetit.png" alt="Thumbnail of Bon Apetit your Majesty tv show">
+          <img
+            src="Images/Bon Apetit.png"
+            alt="Thumbnail of Bon Apetit your Majesty tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/Queen of Tears.png" alt="Thumbnail of Queen of Tears tv show">
+          <img
+            src="Images/Queen of Tears.png"
+            alt="Thumbnail of Queen of Tears tv show"
+          />
         </div>
         <div class="content-card">
-        <div class="card-badge">New Episode</div>
-        <img src="Images/Move to Heaven.png" alt="Thumbnail of Move to Heaven tv show">
+          <div class="card-badge">New Episode</div>
+          <img
+            src="Images/Move to Heaven.png"
+            alt="Thumbnail of Move to Heaven tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/Lawyer woo.png" alt="Thumbnail of Extraordinary Lawyer Woo tv show">
+          <img
+            src="Images/Lawyer woo.png"
+            alt="Thumbnail of Extraordinary Lawyer Woo tv show"
+          />
         </div>
+      </div>
     </div>
-</div>
 
-<!-- Critically Acclaimed -->
-<div class="content-section">
-    <h2 class="section-title">Critically Acclaimed Bingeworthy Crime TV Dramas</h2>
-    <div class="content-row">
+    <!-- Critically Acclaimed -->
+    <div class="content-section">
+      <h2 class="section-title">
+        Critically Acclaimed Bingeworthy Crime TV Dramas
+      </h2>
+      <div class="content-row">
         <div class="content-card">
-        <img src="Images/Mindhunter.png" alt="Thumbnail of Mindhunter tv show">
+          <img
+            src="Images/Mindhunter.png"
+            alt="Thumbnail of Mindhunter tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/Sneaky Pete.png" alt="Thumbnail of Nero tv show">
+          <img src="Images/Sneaky Pete.png" alt="Thumbnail of Nero tv show" />
         </div>
         <div class="content-card">
-        <img src="Images/Lupin.png" alt="Thumbnail of Lupin tv show">
+          <img src="Images/Lupin.png" alt="Thumbnail of Lupin tv show" />
         </div>
         <div class="content-card">
-        <img src="Images/Better call Saul.png" alt="Thumbnail of Better call Saul tv show">
+          <img
+            src="Images/Better call Saul.png"
+            alt="Thumbnail of Better call Saul tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/The Gentlemen.png" alt="Thumbnail of The Gentlemen tv show">
+          <img
+            src="Images/The Gentlemen.png"
+            alt="Thumbnail of The Gentlemen tv show"
+          />
         </div>
         <div class="content-card">
-        <img src="Images/Brothers Sun.png" alt="Thumbnail of Brothers Sun tv show">
+          <img
+            src="Images/Brothers Sun.png"
+            alt="Thumbnail of Brothers Sun tv show"
+          />
         </div>
+      </div>
     </div>
-</div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
