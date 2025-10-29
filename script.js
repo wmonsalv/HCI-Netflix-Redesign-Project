@@ -10,30 +10,39 @@ window.addEventListener('scroll', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const simplifyText = document.querySelector('.simplify-text');
+    const simplifyLabel = document.querySelector('.simplify-label');
+    const caret = document.querySelector('.caret');
+    const menu = document.querySelector('.simplify-menu');
     const menuItems = document.querySelectorAll('.simplify-menu li');
     let activeFilters = new Set();
     let simplified = false;
 
     function applySimplifyFilters(filters) {
-        // Your logic to hide/show content sections based on filters
-        // Example:
         const sections = document.querySelectorAll('.content-section, .hero');
         sections.forEach(section => {
-            const id = section.dataset.filter; // you can add this in HTML if needed
-            if (!filters.has(id) && simplified) {
-                section.style.display = 'none';
+            // Only show "My List" and "Continue Watching" by default
+            const title = section.querySelector('.section-title');
+            if (simplified && title) {
+                if (filters.has(title.textContent.toLowerCase()) || title.textContent.includes('My List') || title.textContent.includes('Continue Watching')) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
             } else {
                 section.style.display = '';
             }
         });
+
+        // Hide hero if simplified
+        const hero = document.querySelector('.hero');
+        if (simplified && hero) hero.style.display = 'none';
+        if (!simplified && hero) hero.style.display = '';
     }
 
     function selectDefaultFilters() {
         activeFilters.clear();
-        ['recently-watched', 'continue-watching'].forEach(filter => {
-            activeFilters.add(filter);
-        });
+        activeFilters.add('recently-watched');
+        activeFilters.add('continue-watching');
 
         menuItems.forEach(item => {
             if (activeFilters.has(item.dataset.filter)) {
@@ -44,24 +53,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    simplifyText.addEventListener('click', () => {
+    // Toggle simplify / de-simplify
+    simplifyLabel.addEventListener('click', () => {
         simplified = !simplified;
 
         if (simplified) {
             selectDefaultFilters();
-            simplifyText.firstChild.textContent = 'De-Simplify';
+            simplifyLabel.textContent = 'De-Simplify';
         } else {
             activeFilters.clear();
             menuItems.forEach(item => item.style.backgroundColor = '');
-            simplifyText.firstChild.textContent = 'Simplify';
+            simplifyLabel.textContent = 'Simplify';
         }
 
         applySimplifyFilters(activeFilters);
     });
 
+    // Show/hide menu when clicking caret
+    caret.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent toggling simplify
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Filter selection
     menuItems.forEach(item => {
         item.addEventListener('click', e => {
-            e.stopPropagation(); // prevent triggering the simplify toggle
+            e.stopPropagation();
             const filter = item.dataset.filter;
 
             if (activeFilters.has(filter)) {
@@ -74,11 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             applySimplifyFilters(activeFilters);
 
-            // Update button text dynamically
-            simplifyText.firstChild.textContent = activeFilters.size > 0 ? 'De-Simplify' : 'Simplify';
+            simplifyLabel.textContent = activeFilters.size > 0 ? 'De-Simplify' : 'Simplify';
         });
     });
+
+    // Close menu if clicking outside
+    document.addEventListener('click', () => {
+        menu.style.display = 'none';
+    });
 });
+
 
 
 

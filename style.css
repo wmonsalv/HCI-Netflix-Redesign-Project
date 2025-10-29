@@ -305,6 +305,8 @@ nav.scrolled {
     color: white;
     font-weight: bold;
     padding: 5px 10px;
+    display: flex;
+    align-items: center;
 }
 
 .caret {
@@ -334,8 +336,4 @@ nav.scrolled {
 
 .simplify-menu li:hover {
     background-color: #333;
-}
-
-.simplify-wrapper:hover .simplify-menu {
-    display: block;
 }
