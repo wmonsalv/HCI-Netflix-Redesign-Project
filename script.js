@@ -221,5 +221,5 @@ function applySimplifyFilters(filters) {
 
     // Add padding to body if hero is hidden
     const container = document.body;
-    container.style.paddingTop = hero && hero.style.display !== 'none' ? '0' : '80px';
+    container.style.paddingTop = hero && hero.style.display !== 'none' ? '0' : '70px';
 }
