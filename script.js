@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'recently-watched':
                     sections.forEach(sec => {
                         const title = sec.querySelector('.section-title')?.textContent || '';
-                        if (title.includes("Because you added")) {
+                        if (title.includes("Recently Watched")) {
                             sec.style.display = 'block';
                         }
                     });
